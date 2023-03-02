@@ -6,7 +6,10 @@
  * @returns {Promise<value>}
  */
 function makePromiseResolveWith(value){
-    // put your code here
-}
+    return Promise.resolve(value);
+};
 
-console.log(makePromiseResolveWith(5));
+makePromiseResolveWith(5)
+.then((data) =>{
+    console.log(data);
+})

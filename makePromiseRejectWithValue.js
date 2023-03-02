@@ -5,7 +5,9 @@
  * @returns {Promise<,"Boo!">}
  */
 function makePromiseRejectWithBoo(){
-    // put your code here
+    return Promise.reject(Error("<BOO!>"));
 }
-
-console.log(makePromiseRejectWithBoo());
+makePromiseRejectWithBoo()
+.catch((error) =>{
+  console.log(error)
+});
